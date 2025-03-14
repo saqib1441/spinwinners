@@ -2,13 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { FaChevronUp } from "react-icons/fa6";
 
-interface SportsProps {
-  winner?: string;
-  hcp?: string;
-  tot?: string;
-}
-
-const Sports: React.FC<SportsProps> = ({ winner, hcp, tot }) => {
+const Sports: React.FC = () => {
   return (
     <div className="bg-background rounded-tl-2xl rounded-tr-2xl shadow-md">
       <div className="flex items-center justify-between border-black border-b p-4">
