@@ -4,6 +4,25 @@ import { FC, useRef, useState, useEffect } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const sports = [
+  { name: "Featured", icon: "⭐" },
+  { name: "Soccer", icon: "⚽" },
+  { name: "Basketball", icon: "🏀" },
+  { name: "Baseball", icon: "⚾" },
+  { name: "Tennis", icon: "🎾" },
+  { name: "Horse Racing", icon: "🏇" },
+  { name: "AFL", icon: "🏉" },
+  { name: "American Football", icon: "🏈" },
+  { name: "Alpine Skiing", icon: "⛷️" },
+  { name: "Badminton", icon: "🏸" },
+  { name: "3x3 Basketball", icon: "🏀" },
+  { name: "Biathlon", icon: "🎿" },
+  { name: "Boxing", icon: "🥊" },
+  { name: "Cricket", icon: "🏏" },
+  { name: "Cross-country", icon: "⛷️" },
+  { name: "Curling", icon: "🥌" },
+  { name: "Cycling", icon: "🚴" },
+  { name: "eBasketball", icon: "🕹️" },
+  { name: "eSoccer", icon: "🎮" },
   { name: "Formula E", icon: "🏁" },
   { name: "Golf", icon: "⛳" },
   { name: "Greyhound Racing", icon: "🐕" },
@@ -42,7 +61,7 @@ const SportsSwiper: FC = () => {
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
-      const scrollAmount = 200;
+      const scrollAmount = 300;
       scrollRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
@@ -64,10 +83,10 @@ const SportsSwiper: FC = () => {
   }, []);
 
   return (
-    <div className="relative my-8 w-[85%] mx-auto">
+    <div className="relative my-8 w-[95%] mx-auto">
       {showLeft && (
         <button
-          className="px-[0.0625rem] py-[0.625rem] align-middle border border-transparent bg-[#2C323A] rounded-tr-sm rounded-br-sm shadow-md shadow-black/20 text-muted-foreground text-sm leading-none no-underline cursor-pointer absolute left-0 top-[0.75rem] origin-top z-5"
+          className="px-[0.0625rem] py-[0.625rem] align-middle border border-transparent bg-background rounded-tr-sm rounded-br-sm shadow-md shadow-black/20 text-muted-foreground text-sm leading-none no-underline cursor-pointer absolute left-0 top-[0.75rem] origin-top z-5"
           onClick={() => scroll("left")}
         >
           <IoIosArrowBack size={24} />
@@ -85,10 +104,10 @@ const SportsSwiper: FC = () => {
               key={index}
               className="flex flex-col items-center text-white rounded-lg text-center"
             >
-              <span className="text-3xl bg-secondary w-14 h-14 flex items-center justify-center rounded-xl mb-3">
+              <span className="text-2xl bg-secondary w-14 h-14 flex items-center justify-center rounded-xl mb-3">
                 {sport.icon}
               </span>
-              <span className="text-[10px] leading-tight text-muted-foreground">
+              <span className="text-[11px] leading-tight text-muted-foreground">
                 {words.length > 1 ? (
                   <>
                     {words[0]} <br /> {words.slice(1).join(" ")}
@@ -104,7 +123,7 @@ const SportsSwiper: FC = () => {
 
       {showRight && (
         <button
-          className="px-[0.0625rem] py-[0.625rem] align-middle border border-transparent bg-[#2C323A] rounded-tr-sm rounded-br-sm shadow-md shadow-black/20 text-[#8D9DA8] text-sm leading-none no-underline cursor-pointer absolute right-0 top-[0.75rem] origin-top z-5"
+          className="px-[0.0625rem] py-[0.625rem] align-middle border border-transparent bg-background rounded-tr-sm rounded-br-sm shadow-md shadow-black/20 text-muted-foreground text-sm leading-none no-underline cursor-pointer absolute right-0 top-[0.75rem] origin-top z-5"
           onClick={() => scroll("right")}
         >
           <IoIosArrowForward size={20} />

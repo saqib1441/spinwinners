@@ -2,6 +2,7 @@ import { FC } from "react";
 import Search from "./Search";
 import Navbar from "./Navbar";
 import SportsSwiper from "./SportsSwiper";
+import FeaturesEvents from "./FeaturesEvents";
 
 const Home: FC = () => {
   return (
@@ -9,6 +10,7 @@ const Home: FC = () => {
       <Navbar />
       <Search />
       <SportsSwiper />
+      <FeaturesEvents />
     </div>
   );
 };
